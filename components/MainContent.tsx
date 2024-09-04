@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MainContent() {
+export default function MainContent({ signataires }: { signataires: number }) {
   return (
     <>
       <h1 className="mt-20 max-w-full text-5xl font-extrabold tracking-tight leading-10 text-center min-h-[139px] text-slate-900 w-[710px] max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-10">
@@ -10,10 +10,10 @@ export default function MainContent() {
       <p className="mt-7 text-2xl font-semibold leading-7 text-center text-black max-md:max-w-full">
         Face au harcèlement scolaire, Hugo Martinez{" "}
         <span className="italic">{`(Président de l'Association HUGO!)`}</span> a
-        lancé le 4 septembre 2024 un appel, avec 40 maires de toute la France, à
-        une mobilisation inédite des élus locaux, en première ligne, face au
-        harcèlement scolaire et identifie ce combat comme un chemin vers une
-        unité nationale.
+        lancé le 4 septembre 2024 un appel, avec {signataires} maires de toute
+        la France, à une mobilisation inédite des élus locaux, en première
+        ligne, face au harcèlement scolaire et identifie ce combat comme un
+        chemin vers une unité nationale.
       </p>
       <article className="self-stretch mt-20 text-xl tracking-tight leading-7 text-justify text-slate-900 max-md:mt-10 max-md:max-w-full">
         <p className="leading-8">

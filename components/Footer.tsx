@@ -27,15 +27,14 @@ const Signature: React.FC<SignatureProps> = ({
   </div>
 );
 
-export default async function Footer() {
-  const { rows, fields } =
-    await sql`SELECT id, prenom, nom, ville, code_postal, fonction FROM signatures`;
-
-  console.log(rows);
-
+export default async function Footer({
+  signataires,
+}: {
+  signataires: SignatureProps[];
+}) {
   return (
     <footer className="flex flex-wrap gap-5 justify-between mt-14 max-w-full text-2xl font-bold leading-7 text-black w-[948px] max-md:mt-10">
-      {rows.map((row, index) => (
+      {signataires.map((row: SignatureProps) => (
         <Signature
           key={row.id}
           nom={row.nom}
